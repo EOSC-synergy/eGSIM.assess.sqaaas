@@ -1,0 +1,68 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.2.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/rizac/eGSIM:
+      branch: main
+      repo: https://github.com/rizac/eGSIM
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/rizac/eGSIM git:
+        commands:
+        - /usr/bin/env sh .sqa/script.boozy-malachite-lionfish.sh
+        container: qc.acc_nerdy-carmine-baboon
+  QC.Doc:
+    repos:
+      github.com/rizac/eGSIM find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-periwinkle-dachshund.sh
+        container: qc.doc_tacky-sepia-serval
+      github.com/rizac/eGSIM git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-amber-fowl.sh
+        container: qc.doc_gamy-yellow-chihuahua
+      github.com/rizac/eGSIM markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-thistle-oyster.sh
+        container: qc.doc_zippy-khaki-vulture
+  QC.Lic:
+    repos:
+      github.com/rizac/eGSIM licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-rust-gibbon.sh
+        container: qc.lic_cozy-blue-molly
+  QC.Sec:
+    repos:
+      github.com/rizac/eGSIM bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-saffron-snail.sh
+        container: qc.sec_crappy-plum-tang
+  QC.Sty:
+    repos:
+      github.com/rizac/eGSIM flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-apricot-chin.sh
+        container: qc.sty_greasy-viridian-owl
+      github.com/rizac/eGSIM jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-alizarin-lemur.sh
+        container: qc.sty_trippy-razzmatazz-wildebeest
+  QC.Uni:
+    repos:
+      github.com/rizac/eGSIM pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-lemon-burmese.sh
+        container: qc.uni_hasty-puce-tarantula
+  QC.Ver:
+    repos:
+      github.com/rizac/eGSIM get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-cream-butterfly.sh
+        container: qc.ver_squirrely-malachite-impala
+timeout: 5400
