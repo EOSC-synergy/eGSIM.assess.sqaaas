@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       github.com/rizac/eGSIM git:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-gamboge-ferret.sh
-        container: qc.acc_jumpy-salmon-leopard
+        - /usr/bin/env sh .sqa/script.stealthy-cornflower-macaque.sh
+        container: qc.acc_squirrely-auburn-dragon
   QC.Doc:
     repos:
       github.com/rizac/eGSIM find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-razzmatazz-lynx.sh
-        container: qc.doc_freaky-linen-barnacle
+        - /usr/bin/env sh .sqa/script.gummy-heliotrope-owl.sh
+        container: qc.doc_cozy-blue-koala
       github.com/rizac/eGSIM git:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-coral-yak.sh
-        container: qc.doc_skimpy-periwinkle-hyrax
+        - /usr/bin/env sh .sqa/script.snazzy-chartreuse-monster.sh
+        container: qc.doc_wheezy-amaranth-tortoise
       github.com/rizac/eGSIM markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-fuchsia-kudu.sh
-        container: qc.doc_smelly-amber-liger
+        - /usr/bin/env sh .sqa/script.nerdy-wheat-zebra.sh
+        container: qc.doc_gummy-heliotrope-dunker
   QC.Lic:
     repos:
       github.com/rizac/eGSIM licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-cinnamon-wallaby.sh
-        container: qc.lic_shabby-amaranth-llama
+        - /usr/bin/env sh .sqa/script.beady-chestnut-angelfish.sh
+        container: qc.lic_geeky-grey-quoll
   QC.Sec:
     repos:
       github.com/rizac/eGSIM bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-crimson-emu.sh
-        container: qc.sec_shaggy-silver-monkey
+        - /usr/bin/env sh .sqa/script.flaky-jade-bison.sh
+        container: qc.sec_tacky-cinnamon-maltese
   QC.Sty:
     repos:
       github.com/rizac/eGSIM flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-eggplant-kingfisher.sh
-        container: qc.sty_trippy-mustard-grasshopper
+        - /usr/bin/env sh .sqa/script.pretty-saffron-markhor.sh
+        container: qc.sty_nerdy-viridian-macaque
       github.com/rizac/eGSIM jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-mustard-camel.sh
-        container: qc.sty_sleepy-orchid-opossum
+        - /usr/bin/env sh .sqa/script.chummy-bronze-mandrill.sh
+        container: qc.sty_chummy-orchid-rabbit
   QC.Uni:
     repos:
       github.com/rizac/eGSIM pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-linen-mastiff.sh
-        container: qc.uni_hilly-platinum-frog
+        - /usr/bin/env sh .sqa/script.pasty-cardinal-donkey.sh
+        container: qc.uni_droopy-goldenrod-budgerigar
   QC.Ver:
     repos:
       github.com/rizac/eGSIM get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-brass-newfoundland.sh
-        container: qc.ver_stuffy-saffron-mule
+        - /usr/bin/env sh .sqa/script.homey-denim-tamarin.sh
+        container: qc.ver_gimpy-cyan-fly
 timeout: 5400
